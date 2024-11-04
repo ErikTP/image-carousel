@@ -1,33 +1,26 @@
 const previousButton = document.getElementById("previousButton");
 const nextButton = document.getElementById("nextButton");
-const currentElement = document.getElementById("currentElement");
-
-const items = ["Element 1", "Element 2", "Element 3", "Element 4"];
+const images = document.querySelectorAll(".images img");
 let currentIndex = 0;
-
-function showCurrentElement() {
-    currentElement.textContent = items[currentIndex];
-
+function showCurrentImage() {
+    images.forEach((img, index) => {
+        img.style.display = index === currentIndex ? 'block' : 'none';
+    });
 }
-
 function next() {
     currentIndex++;
-
-    if (currentIndex >= items.length) {
+    if (currentIndex >= images.length) {
         currentIndex = 0;
     }
-    showCurrentElement();
+    showCurrentImage();
 }
-
 function prev() {
     currentIndex--;
-
     if (currentIndex <0) {
-        currentIndex = items.length - 1;
+        currentIndex = images.length - 1;
     }
-    showCurrentElement();
+    showCurrentImage();
 }
 nextButton.addEventListener("click", next);
 previousButton.addEventListener("click", prev);
-
-showCurrentElement();
+showCurrentImage();
