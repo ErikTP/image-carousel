@@ -1,0 +1,19 @@
+img {
+    width: 20rem;
+    height: 20rem;
+   
+  
+    
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    
+}
+
+.button-group {
+    margin-top: 10rem;
+}
