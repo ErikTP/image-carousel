@@ -24,3 +24,9 @@ function prev() {
 nextButton.addEventListener("click", next);
 previousButton.addEventListener("click", prev);
 showCurrentImage();
+
+function startAutoSlide(interval = 3000) {
+    setInterval(next, interval);
+}
+
+startAutoSlide(3000);

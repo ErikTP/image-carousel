@@ -5,7 +5,15 @@ img {
     width: 20rem;
     height: 20rem;
     object-fit: cover;
-   display: none;
+    display: none;
+    border-radius: 1rem;
+    justify-content: center;
+    box-shadow: 3px 3px #694b86, -1em 0 .4em #d3b6ed;
+
+
+
+
+
     
 }
 
